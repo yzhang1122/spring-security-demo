@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stages("Build") {
+        stage("Build") {
             steps {
                 dir("spring-security-demo") {
                     sh "mvn clean install"
@@ -21,7 +21,7 @@ pipeline {
             }
         }
 
-        stages("Test") {
+        stage("Test") {
             steps {
                 dir("spring-security-demo") {
                     sh "mvn test"

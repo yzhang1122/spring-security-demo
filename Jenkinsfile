@@ -7,12 +7,6 @@ pipeline {
             }
         }
 
-        stage("Clone Repo") {
-            steps {
-                sh "git clone https://github.com/yzhang1122/spring-security-demo.git"
-            }
-        }
-
         stage("Build") {
             steps {
                 dir("spring-security-demo") {

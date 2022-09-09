@@ -1,15 +1,18 @@
 pipeline {
     agent any
+    
     parameters {
         booleanParam(defaultValue: false, description: "Enable service?", name: "myBoolean")
         string(defaultValue: "Test", description: "which env to deploy?", name: "deployEnv")
         choice(choices: ["E2E", "QA", "PROD", "Test"], description: "which env to deploy?", name: "deploySelect")
     }
+
     environment {
         def myString = "Hello World"
         def myNumber = 10
         def myBoolean = true
     }
+
     stages {
         stage("Build") {
             steps {

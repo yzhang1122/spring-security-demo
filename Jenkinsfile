@@ -5,6 +5,11 @@ pipeline {
         string(defaultValue: "Test", description: "which env to deploy?", name: "deployEnv")
         choice(choices: ["E2E", "QA", "PROD", "Test"], description: "which env to deploy?", name: "deploySelect")
     }
+    environment {
+        def myString = "Hello World"
+        def myNumber = 10
+        def myBoolean = true
+    }
     stages {
         stage("Build") {
             steps {
@@ -17,6 +22,9 @@ pipeline {
 
         stage("Test") {
             steps {
+                echo "myString: ${myString}"
+                echo "myNumber: ${myNumber}"
+                echo "myBoolean: ${myBoolean}"
                 sh "mvn test"
             }
         }

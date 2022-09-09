@@ -25,6 +25,7 @@ pipeline {
                 echo "myString: ${myString}"
                 echo "myNumber: ${myNumber}"
                 echo "myBoolean: ${myBoolean}"
+                echo "Running build with number: ${env.BUILD_NUMBER}"
                 sh "mvn test"
             }
         }

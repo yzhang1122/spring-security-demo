@@ -1,7 +1,6 @@
 package com.yi.springsecuritydemo.controller;
 
 import org.springframework.security.core.Authentication;
-import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +11,7 @@ import java.util.Map;
 @RestController
 public class WebController {
 
-    private Authentication1 authentication;
+    private Authentication authentication;
     private JwtAuthenticationToken jwtAuthenticationToken;
 
     @GetMapping(value = "/time", produces = "application/json")

@@ -12,7 +12,7 @@ import java.util.Map;
 @RestController
 public class WebController {
 
-    private Authentication authentication;
+    private Authentication1 authentication;
     private JwtAuthenticationToken jwtAuthenticationToken;
 
     @GetMapping(value = "/time", produces = "application/json")

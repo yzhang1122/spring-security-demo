@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-            echo "booleanParam is set to: ${params.booleanParam}"
+            echo "booleanParam is set to: ${params.myBoolean}"
                 sh "mvn clean install"
             }
         }
